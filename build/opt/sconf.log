@@ -1,0 +1,49 @@
+file /home/nika/PandS_zsim/SConstruct,line 150:
+	Configure(confdir = build/opt/.sconf_temp)
+scons: Configure: Checking for C library hdf5... 
+build/opt/.sconf_temp/conftest_0.c <-
+  |
+  |
+  |
+  |int
+  |main() {
+  |  
+  |return 0;
+  |}
+  |
+gcc -o build/opt/.sconf_temp/conftest_0.o -c build/opt/.sconf_temp/conftest_0.c
+gcc -o build/opt/.sconf_temp/conftest_0 build/opt/.sconf_temp/conftest_0.o -lhdf5
+/usr/bin/ld: cannot find -lhdf5
+collect2: error: ld returned 1 exit status
+scons: Configure: no
+
+scons: Configure: Checking for C library hdf5_serial... 
+build/opt/.sconf_temp/conftest_1.c <-
+  |
+  |
+  |
+  |int
+  |main() {
+  |  
+  |return 0;
+  |}
+  |
+gcc -o build/opt/.sconf_temp/conftest_1.o -c build/opt/.sconf_temp/conftest_1.c
+gcc -o build/opt/.sconf_temp/conftest_1 build/opt/.sconf_temp/conftest_1.o -lhdf5_serial
+scons: Configure: yes
+
+scons: Configure: Checking for C library hdf5_serial_hl... 
+build/opt/.sconf_temp/conftest_2.c <-
+  |
+  |
+  |
+  |int
+  |main() {
+  |  
+  |return 0;
+  |}
+  |
+gcc -o build/opt/.sconf_temp/conftest_2.o -c build/opt/.sconf_temp/conftest_2.c
+gcc -o build/opt/.sconf_temp/conftest_2 build/opt/.sconf_temp/conftest_2.o -lhdf5_serial -lhdf5_serial_hl
+scons: Configure: yes
+
